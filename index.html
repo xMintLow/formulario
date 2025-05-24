@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Tecnológico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Equipos Tecnológicos - TecLaner</h1>
+
+        <div class="client-info">
+            <label for="clientName">Nombre del Cliente:</label>
+            <input type="text" id="clientName" placeholder="Ingresa tu nombre">
+        </div>
+
+        <div class="products-section">
+            <h2>Productos Disponibles</h2>
+            <div class="products-grid">
+                <div class="product-card" data-id="1" data-name="Laptop Gamer" data-price="1200">
+                    <img src="productos/laptop.png" alt="Laptop Gamer">
+                    <h3>Laptop Gamer</h3>
+                    <p>Precio: $1200</p>
+                    <div class="add-controls">
+                        <input type="number" value="1" min="1" class="product-quantity">
+                        <button class="add-to-cart">Agregar</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="2" data-name="Monitor Curvo 27''" data-price="300">
+                    <img src="productos/monitor.png" alt="Monitor Curvo">
+                    <h3>Monitor Curvo 27''</h3>
+                    <p>Precio: $300</p>
+                    <div class="add-controls">
+                        <input type="number" value="1" min="1" class="product-quantity">
+                        <button class="add-to-cart">Agregar</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="3" data-name="Teclado Mecánico RGB" data-price="80">
+                    <img src="productos/teclado.png" alt="Teclado Mecánico">
+                    <h3>Teclado Mecánico RGB</h3>
+                    <p>Precio: $80</p>
+                    <div class="add-controls">
+                        <input type="number" value="1" min="1" class="product-quantity">
+                        <button class="add-to-cart">Agregar</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="4" data-name="Mouse Gaming Inalámbrico" data-price="50">
+                    <img src="productos/mause.png" alt="Mouse Gaming">
+                    <h3>Mouse Gaming Inalámbrico</h3>
+                    <p>Precio: $50</p>
+                    <div class="add-controls">
+                        <input type="number" value="1" min="1" class="product-quantity">
+                        <button class="add-to-cart">Agregar</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="5" data-name="Auriculares Noise Cancelling" data-price="150">
+                    <img src="productos/auriculares.png" alt="Auriculares">
+                    <h3>Auriculares Noise Cancelling</h3>
+                    <p>Precio: $150</p>
+                    <div class="add-controls">
+                        <input type="number" value="1" min="1" class="product-quantity">
+                        <button class="add-to-cart">Agregar</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="6" data-name="Webcam Full HD" data-price="70">
+                    <img src="productos/webcam.png" alt="Webcam">
+                    <h3>Webcam Full HD</h3>
+                    <p>Precio: $70</p>
+                    <div class="add-controls">
+                        <input type="number" value="1" min="1" class="product-quantity">
+                        <button class="add-to-cart">Agregar</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="7" data-name="Disco Duro Externo 1TB" data-price="60">
+                    <img src="productos/disco.png" alt="Disco Duro Externo">
+                    <h3>Disco Duro Externo 1TB</h3>
+                    <p>Precio: $60</p>
+                    <div class="add-controls">
+                        <input type="number" value="1" min="1" class="product-quantity">
+                        <button class="add-to-cart">Agregar</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="8" data-name="Router Wi-Fi 6" data-price="100">
+                    <img src="productos/router.png" alt="Router Wi-Fi 6">
+                    <h3>Router Wi-Fi 6</h3>
+                    <p>Precio: $100</p>
+                    <div class="add-controls">
+                        <input type="number" value="1" min="1" class="product-quantity">
+                        <button class="add-to-cart">Agregar</button>
+                    </div>
+                </div>
+                <div class="product-card" data-id="9" data-name="Impresora Multifuncional" data-price="200">
+                    <img src="productos/impresora.png" alt="Impresora">
+                    <h3>Impresora Multifuncional</h3>
+                    <p>Precio: $200</p>
+                    <div class="add-controls">
+                        <input type="number" value="1" min="1" class="product-quantity">
+                        <button class="add-to-cart">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="selected-products-section">
+            <h2>Tus Productos Seleccionados</h2>
+            <ul id="selectedProductsList">
+                </ul>
+            <div class="total-price-display">
+                Total del inventario: <strong id="totalPrice"> $0.00</strong>
+            </div>
+            <div class="actions">
+                <button id="generatePdf">Generar PDF</button>
+                <button id="clearInventory">Vaciar Inventario</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 All rights reserved to @xMint</p>
+    </footer>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
